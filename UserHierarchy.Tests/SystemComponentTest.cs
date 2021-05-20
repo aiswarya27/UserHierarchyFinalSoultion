@@ -87,6 +87,16 @@ namespace UserHierarchy.Tests
             
             Assert.Null(sm.getUsersWithGivenRoles(null));
         }
+        [Fact]
+        public void checkCircularDependencyTest()
+        {
+             IList<Role> roles = new List<Role> {
+                                        new Role {Id=1, Name = "System Admin", Parent=0 },
+                                            new Role {Id=2, Name = "Location Manaer", Parent = 2} };
+            sm = new SystemComponent();
+
+            Assert.True(sm.checkCircularDependency(roles, new Role { Id = 2, Name = "Location Manaer", Parent = 2 }));
+        }
 
         private void initializeSystem()
         {

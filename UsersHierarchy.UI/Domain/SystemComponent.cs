@@ -81,8 +81,8 @@ namespace UsersHierarchy.Domain
         }
 
         public bool checkCircularDependency(IList<Role> listRoles, Role subrole)
-        {
-            if (listRoles.Contains(subrole))
+        {            
+            if (listRoles.Where(x=>x.Id==subrole.Id).ToList().Count>0)
             {
                 Console.WriteLine("Circular dependency exist in roles list!!");
                 _foundCircularDependencyInRole = true;
