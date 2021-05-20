@@ -6,7 +6,7 @@ namespace UsersHierarchy.BL.System
 {
     public  class JsonParser<SystemComponent>
     {
-        private const string FILEPATH = "E:\\UsersHierarchy\\UsersHierarchy.UI\\UsersHierarchy.UI\\InputFile\\userHeirarchy.json";
+        private const string FILEPATH = "E:\\gitubrepo1\\UsersHierarchy.UI\\InputFile\\userHeirarchy.json";
         
         public static SystemComponent parseJson()
         {

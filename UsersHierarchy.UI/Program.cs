@@ -17,7 +17,11 @@ namespace UsersHierarchy.UI
             SystemRepository sr = new SystemRepository();
             SystemBuilder sm = new SystemBuilder(sr);
             sm.BuildSystem();
-            Console.Write(sm.getSubord(userID));
+            string result = sm.getSubord(userID);
+            if(result!="null")
+                Console.WriteLine(result);
+            else
+                Console.WriteLine("Cant find any subordinates!!!");
             Console.ReadLine();
         }
     }

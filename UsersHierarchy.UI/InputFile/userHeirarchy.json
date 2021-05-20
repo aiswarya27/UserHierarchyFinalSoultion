@@ -8,7 +8,7 @@
     {
         "Id": 2,
         "Name": "Location Manager",
-        "Parent": 1
+        "Parent": 2
     },
     {
         "Id": 3,
